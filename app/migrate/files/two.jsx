@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import {  AiOutlineBook, AiOutlineCodepen, AiOutlineShop, AiOutlineUsergroupAdd, AiOutlineCompass, AiOutlineKey } from "react-icons/ai";
 import { FaShieldAlt, FaBriefcase } from "react-icons/fa";
 import { AiFillCaretRight } from "react-icons/ai";
+import Content from "./Content"; 
 
 const countriesData = {
     "Migrate to Germany": {
@@ -167,10 +168,13 @@ const Migrate = () => {
   return (
 
     
+
+    
     <section className="py-10 bg-gradient-to-bl from-white to-orange-50">
       <div className="max-w-screen-xl mx-auto flex gap-8">
         {/* Left Sidebar (Country or Visa List) */}
         <div className="lg:w-[27%] w-full sticky top-0 h-full">
+         
           <h2 className="text-2xl text-orange-500 font-bold mb-6 uppercase text-center tracking-wide">
             {viewingVisaDetail ? "Visa Details" : selectedVisa ? "Visa Types" : "Countries to Migrate To"}
           </h2>
@@ -234,7 +238,7 @@ const Migrate = () => {
           {!selectedCountry ? (
             <div>
               <h3 className="text-3xl font-semibold text-black mb-4 text-center uppercase mt-20">Welcome to Our Immigration Services</h3>
-              <p className="text-lg text-gray-600 mb-8 text-center">Explore1 our wide range of migration options and visa types to help you settle in your dream destination.</p>
+              {/* <p className="text-lg text-gray-600 mb-8 text-center">Explore1 our wide range of migration options and visa types to help you settle in your dream destination.</p> */}
               {/* Your other default content */}
             </div>
           ) : (
@@ -247,11 +251,11 @@ const Migrate = () => {
                       <p className="text-lg text-gray-600 mb-8 text-center">{countriesData[selectedCountry]?.description}</p>
                       {/* Display country image below the description */}
                       <div className="text-center">
-                        <img
+                        `<image
                           src={countriesData[selectedCountry]?.image}
                           alt={selectedCountry}
                           className="mx-auto mt-4 max-w-full h-auto rounded-lg shadow-md"
-                        />
+                        />`
                       </div>
                     </>
                   ) : (
@@ -273,10 +277,13 @@ const Migrate = () => {
               )}
             </>
           )}
+          {/* Add Content component on the right side */}
+          
+        <Content />
         </div>
       </div>
 
-      <div className="relative">
+      {/* <div className="relative">
   <button
     onClick={() =>
       window.open(
@@ -289,7 +296,9 @@ const Migrate = () => {
   >
     Claim Offer
   </button>
-</div>
+
+</div> */}
+
 
     </section>
   );

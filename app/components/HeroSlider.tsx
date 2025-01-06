@@ -58,6 +58,7 @@ const sliderData = [
     gradient: "bg-gradient-to-r from-red-700 to-white", // Malta color gradient
   },
 ];
+
 const Slider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
