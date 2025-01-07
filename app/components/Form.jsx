@@ -143,7 +143,7 @@ const Form = () => {
             type="number"
             id="age"
             name="age"
-            placeholder="Your Age1"
+            placeholder="Your Age"
             className="w-full px-4 py-1 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-400 transition"
             required
             value={age}
