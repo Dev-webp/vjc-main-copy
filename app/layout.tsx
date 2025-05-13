@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import FloatingWhatsApp from "@/app/components/FloatingWhatsapp";
-import Nav from "@/app/components/Nav";
+import Nav from "@/app/components/Nav"; 
 
 import TawkToChat from "@/app/components/TawkToChat";
 
